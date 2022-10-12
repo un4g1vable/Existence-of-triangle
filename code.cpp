@@ -5,12 +5,14 @@ using namespace std;
 
 int main()
 {
+	setlocale(0, "");
+	
 	int a,b,c;
-	std::cout << "enter the first side: ";
+	std::cout << "Введи первую сторону: ";
 	std::cin >> a;
-	std::cout << "enter the second side: ";
+	std::cout << "Введи вторую сторону: ";
 	std::cin >> b;
-	std::cout << "enter the third side: ";
+	std::cout << "Введи третью сторону: ";
 	std::cin >> c;
 	if ((a + b) > c and (a + c) > b and (b + c) > a)
 	{
@@ -19,15 +21,15 @@ int main()
 		int avg_length = (a + b + c) - max(a, max(b, c)) - min(a, min(b, c));
 		if (pow(max_length, 2) > pow(min_length, 2) + pow(avg_length, 2))
 		{
-			std::cout << "the triangle is obtuse";
+			std::cout << "Треугольник тупоугольный";
 		}
 		else if (pow(max_length, 2) < pow(min_length, 2) + pow(avg_length, 2))
 		{
-			std::cout << "the triangle is acute-angled";
+			std::cout << "Треугольник остроугольный";
 		}
 		else if (pow(max_length, 2) == pow(min_length, 2) + pow(avg_length, 2))
 		{
-			std::cout << "the triangle is rectangular";
+			std::cout << "Треугольник прямоугольный";
 		}
 	}
 	else
